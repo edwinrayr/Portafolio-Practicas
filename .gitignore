@@ -10,3 +10,8 @@ build/
 
 # Archivos de variables de entorno 
 .env
+
+# PHP / XAMPP
+vendor/
+composer.lock
+*.log
