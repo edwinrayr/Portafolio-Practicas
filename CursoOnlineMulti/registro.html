@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - DevMaster</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo"><i class="ri-code-box-line"></i> DevMaster</a>
+            <div class="nav__menu" style="margin-left: auto; margin-right: 2rem;">
+                <a href="temario.html" style="color: white; margin-right: 1.5rem;">Temario</a>
+                <a href="faq.html" style="color: white;">Ayuda</a>
+            </div>
+            <a href="index.html" class="btn btn--sm" style="background: transparent; border: 1px solid white;">Volver</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="register section" style="padding-top: 8rem; min-height: 80vh;">
+            <div class="container register__container">
+                <div class="register__content">
+                    <h2 class="section__title">Asegura tu lugar</h2>
+                    <p class="register__desc">Acceso gratuito por tiempo limitado.</p>
+                </div>
+
+                <form class="form" id="register-form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Nombre Completo</label>
+                        <input type="text" id="name" class="form__input" placeholder="Ej. Juan Pérez">
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">Correo Electrónico</label>
+                        <input type="email" id="email" class="form__input" placeholder="tu@email.com">
+                    </div>
+                    <div class="form__group">
+                        <label for="whatsapp" class="form__label">WhatsApp (Opcional)</label>
+                        <input type="tel" id="whatsapp" class="form__input" placeholder="+52...">
+                    </div>
+                    <button type="submit" class="btn btn--block">Acceder a la Clase</button>
+                    <p class="form__error" id="form-error"></p>
+                </form>
+
+                <div class="success-message" id="success-message">
+                    <div class="success__icon"><i class="ri-checkbox-circle-fill"></i></div>
+                    <h3 class="success__title">¡Registro Exitoso!</h3>
+                    <p class="success__desc">Revisa tu correo.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p class="footer__copy">&copy; 2026 Pixel Software.</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
