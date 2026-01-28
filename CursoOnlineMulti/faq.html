@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes - DevMaster</title>
+    <title>Ayuda - DevMaster</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="header">
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.html" class="nav__logo"><i class="ri-code-box-line"></i> DevMaster</a>
-            <div class="nav__menu" style="margin-left: auto; margin-right: 2rem;">
-                <a href="temario.html" style="color: white; margin-right: 1.5rem;">Temario</a>
-                <a href="faq.html" style="color: var(--primary-color);">Ayuda</a>
+            <a href="index.html" class="nav__logo">
+                <i class="ri-code-box-line"></i> DevMaster
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="temario.html" class="nav__link">Temario</a></li>
+                    <li class="nav__item"><a href="faq.html" class="nav__link">Ayuda</a></li>
+                    
+                    <li class="nav__item nav__btn-mobile">
+                        <a href="registro.html" class="btn btn--block">Registrarme</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-            <a href="registro.html" class="btn btn--sm">Registrarme</a>
+
+            <div class="nav__actions">
+                <a href="registro.html" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -23,7 +47,6 @@
         <section class="faq section" style="padding-top: 8rem;">
             <div class="container faq__container">
                 <h2 class="section__title">Preguntas Frecuentes</h2>
-
                 <div class="accordion">
                     <div class="accordion__item">
                         <header class="accordion__header">
@@ -34,7 +57,6 @@
                             <p class="accordion__desc">Sí, se recomienda tener conocimientos básicos en backend.</p>
                         </div>
                     </div>
-                    
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <h3 class="accordion__title">¿La Masterclass es en vivo?</h3>
@@ -44,7 +66,6 @@
                             <p class="accordion__desc">No, es pre-grabada para ver a tu ritmo.</p>
                         </div>
                     </div>
-
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <h3 class="accordion__title">¿Recibiré un certificado?</h3>
@@ -62,7 +83,6 @@
     <footer class="footer container">
         <p class="footer__copy">&copy; 2026 Pixel Software. Todos los derechos reservados.</p>
     </footer>
-
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

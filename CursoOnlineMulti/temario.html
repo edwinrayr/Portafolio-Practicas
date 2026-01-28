@@ -8,14 +8,38 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="header">
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.html" class="nav__logo"><i class="ri-code-box-line"></i> DevMaster</a>
-            <div class="nav__menu" style="margin-left: auto; margin-right: 2rem;">
-                <a href="temario.html" style="color: var(--primary-color); margin-right: 1.5rem;">Temario</a>
-                <a href="faq.html" style="color: white;">Ayuda</a>
+            <a href="index.html" class="nav__logo">
+                <i class="ri-code-box-line"></i> DevMaster
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="temario.html" class="nav__link">Temario</a></li>
+                    <li class="nav__item"><a href="faq.html" class="nav__link">Ayuda</a></li>
+                    
+                    <li class="nav__item nav__btn-mobile">
+                        <a href="registro.html" class="btn btn--block">Registrarme</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-            <a href="registro.html" class="btn btn--sm">Registrarme</a>
+
+            <div class="nav__actions">
+                <a href="registro.html" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -23,33 +47,28 @@
         <section class="learn section" style="padding-top: 8rem;">
             <div class="container">
                 <h2 class="section__title">Contenido de la Masterclass</h2>
-                
                 <div class="learn__grid">
                     <article class="card">
                         <div class="card__icon"><i class="ri-server-line"></i></div>
                         <h3 class="card__title">Microservicios</h3>
                         <p class="card__desc">Patrones reales de la industria y comunicación asíncrona.</p>
                     </article>
-
                     <article class="card">
                         <div class="card__icon"><i class="ri-database-2-line"></i></div>
                         <h3 class="card__title">Escalabilidad DB</h3>
                         <p class="card__desc">Estrategias de Sharding y Replicación.</p>
                     </article>
-
                     <article class="card">
                         <div class="card__icon"><i class="ri-shield-check-line"></i></div>
                         <h3 class="card__title">Seguridad Zero Trust</h3>
                         <p class="card__desc">Implementación de OAuth2 y JWT.</p>
                     </article>
-                    
                     <article class="card">
                         <div class="card__icon"><i class="ri-cloud-line"></i></div>
                         <h3 class="card__title">Despliegue Cloud</h3>
                         <p class="card__desc">CI/CD pipelines y contenedores con Docker.</p>
                     </article>
                 </div>
-
                 <div style="text-align: center; margin-top: 4rem;">
                     <a href="registro.html" class="btn">Quiero aprender esto</a>
                 </div>
@@ -60,6 +79,6 @@
     <footer class="footer container">
         <p class="footer__copy">&copy; 2026 Pixel Software. Todos los derechos reservados.</p>
     </footer>
-    
-    </body>
+    <script src="./assets/js/script.js"></script>
+</body>
 </html>

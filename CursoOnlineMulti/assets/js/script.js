@@ -1,6 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    /* ================= 1. BARRA DE PROGRESO (Solo si existe) ================= */
+    /* ================= MENU RESPONSIVO ================= */
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+    const navLinks = document.querySelectorAll('.nav__link');
+
+    // Abrir menú
+    if(navToggle){
+        navToggle.addEventListener('click', () =>{
+            navMenu.classList.add('show-menu');
+        });
+    }
+
+    // Cerrar menú con X
+    if(navClose){
+        navClose.addEventListener('click', () =>{
+            navMenu.classList.remove('show-menu');
+        });
+    }
+
+    // Cerrar menú al dar click en link
+    navLinks.forEach(n => n.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    }));
+
+    /* ================= BARRA DE PROGRESO ================= */
     const scrollProgress = document.getElementById('scroll-progress');
     if(scrollProgress) {
         window.addEventListener('scroll', () => {
@@ -11,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ================= 2. MODAL DE VIDEO (Solo en index.html) ================= */
+    /* ================= MODAL VIDEO (Solo index) ================= */
     const videoTrigger = document.getElementById('video-trigger');
     
     if(videoTrigger) {
@@ -36,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ================= 3. FAQ ACORDEÓN (Solo en faq.html) ================= */
+    /* ================= FAQ ACORDEÓN (Solo faq) ================= */
     const accordionItems = document.querySelectorAll('.accordion__item');
     
     if(accordionItems.length > 0) {
@@ -64,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    /* ================= 4. VALIDACIÓN FORMULARIO (Solo en registro.html) ================= */
+    /* ================= FORMULARIO (Solo registro) ================= */
     const form = document.getElementById('register-form');
 
     if(form) {
