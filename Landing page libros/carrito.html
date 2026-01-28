@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carrito - Librería You</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <style>
+        .cart-page { padding-top: 8rem; padding-bottom: 4rem; }
+        
+        .cart__container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        /* Tabla de productos */
+        .cart__products {
+            background-color: var(--container-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .cart__table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 500px; /* Fuerza scroll en móviles muy pequeños */
+        }
+        
+        /* Contenedor para hacer la tabla responsive */
+        .table__container { overflow-x: auto; }
+
+        .cart__table th, .cart__table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart__table th { color: var(--first-color); font-size: 0.9rem; text-transform: uppercase; }
+        .cart__img { width: 60px; border-radius: 0.5rem; }
+        
+        /* Caja de Totales */
+        .cart__summary {
+            background-color: var(--container-color);
+            padding: 2rem;
+            border-radius: 1rem;
+            height: fit-content;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .summary__title { font-size: 1.25rem; margin-bottom: 1.5rem; color: var(--title-color); }
+        .summary__row { display: flex; justify-content: space-between; margin-bottom: 1rem; color: var(--text-color); }
+        .summary__total { font-weight: 700; color: var(--first-color); font-size: 1.5rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        .btn-delete { color: #ff4b4b; cursor: pointer; font-size: 1.2rem; }
+
+        /* Media Query PC */
+        @media screen and (min-width: 992px) {
+            .cart__container { grid-template-columns: 2fr 1fr; align-items: start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader__content">
+            <i class="ri-loader-4-line loader__icon" id="loader-icon"></i>
+            <span class="loader__text" id="loader-text">Cargando...</span>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">Librería You</a>
+            
+            <a href="libros.html" class="nav__link" style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="ri-arrow-left-line"></i> Seguir Comprando
+            </a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="cart-page container">
+            <h2 class="section__title" style="text-align: left; margin-bottom: 2rem;">Tu Carrito de Compras</h2>
+
+            <div class="cart__container">
+                <div class="cart__products">
+                    <div class="table__container">
+                        <table class="cart__table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="assets/images/home.webp" alt="Libro" class="cart__img"></td>
+                                    <td>El Código Limpio</td>
+                                    <td>$45.00</td>
+                                    <td>1</td>
+                                    <td><i class="ri-delete-bin-line btn-delete"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/home.webp" alt="Libro" class="cart__img"></td>
+                                    <td>Diseño UX/UI</td>
+                                    <td>$50.00</td>
+                                    <td>1</td>
+                                    <td><i class="ri-delete-bin-line btn-delete"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="cart__summary">
+                    <h3 class="summary__title">Resumen del Pedido</h3>
+                    
+                    <div class="summary__row">
+                        <span>Subtotal</span>
+                        <span>$95.00</span>
+                    </div>
+                    <div class="summary__row">
+                        <span>Envío</span>
+                        <span>Gratis</span>
+                    </div>
+                    
+                    <div class="summary__row summary__total">
+                        <span>Total</span>
+                        <span>$95.00</span>
+                    </div>
+
+                    <a href="#" class="button" style="width: 100%; text-align: center; margin-top: 1.5rem;">
+                        Finalizar Compra
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <a href="#" class="footer__logo"><i class="ri-code-s-slash-line"></i> Pixel Software</a>
+                <p class="footer__description">Desarrollamos el futuro digital <br> de tus ideas.</p>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Legales</h3>
+                <ul class="footer__links">
+                    <li><a href="#" class="footer__link">Aviso de Privacidad</a></li>
+                    <li><a href="#" class="footer__link">Términos y Condiciones</a></li>
+                    <li><a href="#" class="footer__link">Política de Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer__content">
+                <h3 class="footer__title">Síguenos</h3>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="footer__social-link"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; 2026 Pixel Software. Todos los derechos reservados.</span>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

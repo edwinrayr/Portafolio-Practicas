@@ -1,0 +1,604 @@
+/* ================= VARIABLES Y BASE ================= */
+:root {
+    /* --- Colores --- */
+    --first-color: #2da7ff; 
+    --first-color-dark: #1a8cd8;
+    --title-color: #ffffff;
+    --text-color: #e0e0e0;
+    --text-color-light: #a0a0a0;
+    --body-color: #0f0f0f;
+    --container-color: #1a1a1a;
+    --black-overlay: rgba(0, 0, 0, 0.65);
+    
+    /* --- Tipografía --- */
+    --body-font: system-ui, -apple-system, sans-serif;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    
+    /* --- Z-index --- */
+    --z-fixed: 100;
+}
+
+/* --- Reset --- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* --- Clases de Utilidad --- */
+.container {
+    max-width: 1024px;
+    margin-inline: 1.5rem; /* Margen a los lados en móvil */
+}
+
+.main { overflow: hidden; }
+
+.section {
+    padding-block: 5rem 2rem;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* ================= HEADER Y NAV (MÓVIL POR DEFECTO) ================= */
+.header {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    padding: 1rem 0;
+    transition: background-color .4s;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between; /* Logo a la izq, Hamburguesa a la der */
+    align-items: center;
+    height: 3.5rem;
+}
+
+.nav__logo {
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* El botón hamburguesa visible en móvil */
+.nav__toggle {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+    display: flex;
+}
+
+/* El botón de cerrar (X) dentro del menú */
+.nav__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+    display: none; /* Se muestra solo al abrir menú en móvil */
+}
+
+/* --- ESTILOS DEL MENÚ EN CELULAR --- */
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%; /* Oculto arriba */
+        left: 0;
+        width: 100%;
+        background-color: rgba(15, 15, 15, 0.98);
+        padding-block: 5rem 4rem;
+        text-align: center;
+        transition: top .4s cubic-bezier(0.4, 0, 0.2, 1);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
+    
+    .nav__close { 
+        display: flex; 
+    }
+    
+    /* Clase JS para bajar el menú */
+    .show-menu { 
+        top: 0; 
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.nav__link:hover { color: var(--first-color); }
+
+/* ================= CARRITO Y BOTONES NAV ================= */
+
+/* Contenedor para agrupar Carrito + Hamburguesa */
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el carrito y la hamburguesa */
+}
+
+/* Estilo del icono del carrito */
+.nav__cart {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s, transform .3s;
+    display: flex; /* Para centrar el icono */
+}
+
+.nav__cart:hover {
+    color: var(--first-color);
+    transform: translateY(-2px);
+}
+
+/* Ajuste Opcional: Indicador de items (puntito rojo) */
+.nav__cart {
+    position: relative;
+}
+
+/* Media Query: Asegurar que en PC se vea bien alineado */
+@media screen and (min-width: 768px) {
+    .nav__actions {
+        gap: 2rem; /* Más espacio en PC */
+    }
+    
+    /* En PC, el menú de navegación podría empujar el carrito a la derecha.
+       El 'justify-content: space-between' del .nav ya se encarga de separarlos. */
+}
+
+
+/* ================= HOME SECTION ================= */
+.home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/home.webp'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 3.5rem;
+}
+
+.home__overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--black-overlay);
+    z-index: 1;
+}
+
+.home__content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+    gap: 1.5rem;
+}
+
+.home__title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    line-height: 1.1; font-weight: 700;
+}
+
+.home__description {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    max-width: 600px;
+    font-size: var(--normal-font-size);
+    line-height: 1.6;
+}
+
+/* Botones */
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--title-color);
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color .3s, transform .3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-dark);
+    transform: translateY(-3px);
+}
+
+.button--hero {
+    background-color: var(--title-color);
+    color: var(--body-color);
+}
+.button--hero:hover {
+    background-color: var(--first-color);
+    color: var(--title-color);
+}
+
+
+/* ================= QUIÉNES SOMOS (Centrado Mejorado) ================= */
+.about {
+    background-color: var(--container-color);
+}
+
+.about__container {
+    display: grid;
+    row-gap: 3rem;
+}
+
+/* Centrado de imagen */
+.about__image-wrapper {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen en su caja */
+    align-items: center;
+}
+
+.about__img {
+    width: 300px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Centrado de texto */
+.about__data {
+    text-align: center; /* Texto centrado en móvil */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Botón centrado */
+}
+
+.about__description {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: var(--text-color-light);
+}
+
+
+/* ================= LOADER (Sin cambios, funciona igual) ================= */
+.loader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--body-color);
+    z-index: 2000; display: flex; justify-content: center; align-items: center;
+    transition: opacity .5s, visibility .5s;
+}
+.loader__content { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.loader__icon { font-size: 4rem; color: var(--first-color); animation: spin 1.5s linear infinite; }
+.loader__text { color: var(--title-color); font-size: var(--normal-font-size); font-weight: 500; text-transform: uppercase; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.hide-loader { opacity: 0; visibility: hidden; pointer-events: none; }
+.no-animation { animation: none !important; }
+
+
+/* ====================================================================
+   MEDIA QUERIES PARA PC (Aquí ocurre la magia del menú)
+==================================================================== */
+@media screen and (min-width: 768px) {
+    :root {
+        --h1-font-size: 4.5rem;
+        --h2-font-size: 2.5rem;
+        --normal-font-size: 1.15rem;
+    }
+
+    .container {
+        margin-inline: auto;
+    }
+    
+    .section {
+        padding-block: 7rem 3rem;
+    }
+
+    /* --- 1. ARREGLO DE LA BARRA DE NAVEGACIÓN EN PC --- */
+    .nav {
+        height: 5rem;
+        /* Esto asegura que el logo quede a un lado y los links al otro, centrados visualmente */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Ocultamos estrictamente la hamburguesa y la X */
+    .nav__toggle, 
+    .nav__close {
+        display: none !important; /* El !important asegura que nadie lo sobrescriba */
+    }
+
+    /* Mostramos el menú horizontalmente */
+    .nav__menu {
+        position: static;
+        top: auto;
+        left: auto;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        backdrop-filter: none;
+        display: flex; /* Asegura que se muestre */
+    }
+
+    .nav__list {
+        flex-direction: row; /* Horizontal */
+        gap: 3rem;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+    }
+
+    /* --- 2. ARREGLO DE QUIÉNES SOMOS EN PC --- */
+    .about__container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+        align-items: center; /* ESTO CENTRA VERTICALMENTE TODO EL CONTENIDO */
+        column-gap: 4rem;
+    }
+
+    /* Para que se vea bonito en PC, la imagen a la izquierda y texto a derecha */
+    .about__image-wrapper {
+        justify-content: flex-end; /* Imagen pegada un poco hacia el centro */
+    }
+    
+    .about__img {
+        width: 450px; /* Imagen más grande */
+    }
+
+    .about__data {
+        text-align: left; /* Texto alineado a la izquierda para mejor lectura en PC */
+        align-items: flex-start; /* Botón alineado a la izquierda */
+    }
+
+    .section__title {
+        text-align: left; /* Título alineado a la izquierda */
+    }
+}
+
+/* ================= PÁGINA DE LIBROS ================= */
+
+/* Ajuste para que el título no quede tapado por el header fijo */
+.books-page {
+    padding-top: 7rem; 
+}
+
+/* --- Grid Container --- */
+.books__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 columna en móvil */
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* --- Tarjeta del Libro --- */
+.book__card {
+    background-color: var(--container-color);
+    border-radius: 1.5rem;
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    transition: transform .3s, box-shadow .3s;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borde sutil */
+}
+
+.book__card:hover {
+    transform: translateY(-10px); /* Efecto de flotación al pasar mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--first-color); /* Borde azul al hover */
+}
+
+/* --- Imagen del Libro --- */
+.book__image-content {
+    width: 100%;
+    height: 250px; /* Altura fija para uniformidad */
+    overflow: hidden;
+    position: relative;
+}
+
+.book__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformar */
+    transition: transform .4s;
+}
+
+.book__card:hover .book__img {
+    transform: scale(1.1); /* Zoom suave a la imagen */
+}
+
+/* --- Datos del Libro --- */
+.book__data {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.book__title {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-bottom: 0.25rem;
+}
+
+.book__author {
+    font-size: 0.9rem;
+    color: var(--text-color-light);
+    font-style: italic;
+}
+
+.book__price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--first-color);
+    margin-block: 0.5rem;
+}
+
+/* Botón pequeño específico para la tarjeta */
+.book__button {
+    width: 100%; /* Botón ancho completo */
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto; /* Empuja el botón al final si hay espacio extra */
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+/* ================= MEDIA QUERIES PARA LIBROS (PC) ================= */
+@media screen and (min-width: 576px) {
+    .books__container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .books__container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+        gap: 3rem;
+    }
+    
+    .book__image-content {
+        height: 300px; /* Imágenes más altas en PC */
+    }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--container-color); /* Fondo diferente al body */
+    padding-block: 4rem 2rem; /* Espaciado arriba y abajo */
+    margin-top: auto; /* Si el contenido es corto, empuja el footer abajo */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__container {
+    display: grid;
+    row-gap: 3rem; /* Espacio entre columnas en móvil */
+}
+
+/* --- Branding --- */
+.footer__logo {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer__logo i {
+    color: var(--first-color); /* Icono del logo en azul */
+}
+
+.footer__description {
+    margin-top: 0.5rem;
+    font-size: var(--normal-font-size);
+}
+
+/* --- Títulos de secciones --- */
+.footer__title {
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-bottom: 1.25rem;
+}
+
+/* --- Enlaces (Legales) --- */
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer__link {
+    color: var(--text-color);
+    transition: color .3s;
+}
+
+.footer__link:hover {
+    color: var(--first-color); /* Hover azul */
+}
+
+/* --- Redes Sociales --- */
+.footer__social {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    background-color: var(--body-color); /* Círculo oscuro */
+    color: var(--title-color);
+    padding: 0.6rem;
+    border-radius: 50%; /* Redondo */
+    font-size: 1.25rem;
+    transition: background-color .3s, color .3s, transform .3s;
+}
+
+.footer__social-link:hover {
+    background-color: var(--first-color);
+    color: var(--title-color);
+    transform: translateY(-3px); /* Pequeña elevación */
+}
+
+/* --- Copyright --- */
+.footer__copy {
+    display: block;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-color-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+    padding-top: 2rem;
+}
+
+/* ================= MEDIA QUERIES FOOTER (PC) ================= */
+@media screen and (min-width: 768px) {
+    .footer__container {
+        grid-template-columns: repeat(3, 1fr); /* 3 Columnas */
+        align-items: start; /* Alinear al inicio verticalmente */
+    }
+    
+    /* Centrar la columna de redes o legales si se desea, 
+       o dejarlas a la izquierda (default) */
+    .footer__content:nth-child(2),
+    .footer__content:nth-child(3) {
+        justify-self: center; /* Centrar columnas 2 y 3 horizontalmente en su espacio */
+    }
+    
+    /* Ajuste para que la descripción no se vea mal alineada */
+    .footer__content:nth-child(1) {
+        justify-self: start;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Librería You</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader__content">
+            <i class="ri-loader-4-line loader__icon" id="loader-icon"></i>
+            <span class="loader__text" id="loader-text">Cargando...</span>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">Librería You</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#nosotros" class="nav__link">Nosotros</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="libros.html" class="nav__link active-link">Libros</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                   <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <a href="carrito.html" class="nav__cart">
+                    <i class="ri-shopping-cart-2-line"></i>
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section books-page">
+            <div class="container">
+                <h2 class="section__title">Nuestro Catálogo</h2>
+                
+                <div class="books__container">
+                    
+                    <article class="book__card">
+                        <div class="book__image-content">
+                            <img src="assets/images/book.webp" alt="Libro 1" class="book__img">
+                        </div>
+                        <div class="book__data">
+                            <h3 class="book__title">El Código Limpio</h3>
+                            <span class="book__author">Robert C. Martin</span>
+                            <p class="book__price">$45.00</p>
+                            <button class="button book__button">
+                                Comprar <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="book__card">
+                        <div class="book__image-content">
+                            <img src="assets/images/book.webp" alt="Libro 2" class="book__img">
+                        </div>
+                        <div class="book__data">
+                            <h3 class="book__title">Algoritmos Maestros</h3>
+                            <span class="book__author">Pedro Domingos</span>
+                            <p class="book__price">$38.50</p>
+                            <button class="button book__button">
+                                Comprar <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <article class="book__card">
+                        <div class="book__image-content">
+                            <img src="assets/images/book.webp" alt="Libro 3" class="book__img">
+                        </div>
+                        <div class="book__data">
+                            <h3 class="book__title">Diseño UX/UI</h3>
+                            <span class="book__author">Don Norman</span>
+                            <p class="book__price">$50.00</p>
+                            <button class="button book__button">
+                                Comprar <i class="ri-shopping-cart-line"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="ri-code-s-slash-line"></i> Pixel Software
+                </a>
+                <p class="footer__description">
+                    Desarrollamos el futuro digital <br> 
+                    de tus ideas.
+                </p>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Legales</h3>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Aviso de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Términos y Condiciones</a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">Política de Cookies</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Síguenos</h3>
+                <div class="footer__social">
+                    <a href="https://facebook.com" target="_blank" class="footer__social-link">
+                        <i class="ri-facebook-circle-fill"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="footer__social-link">
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="footer__social-link">
+                        <i class="ri-tiktok-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <span class="footer__copy">
+            &#169; 2026 Pixel Software. Todos los derechos reservados.
+        </span>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>
