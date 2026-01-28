@@ -1,0 +1,12 @@
+# Dependencias de Node
+node_modules/
+dist/
+build/
+
+# Archivos de sistema y VS CODE
+.DS_Store
+.vs_code/
+*.log
+
+# Archivos de variables de entorno 
+.env
