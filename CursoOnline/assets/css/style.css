@@ -70,7 +70,7 @@ img { max-width: 100%; display: block; }
     /* 2. Mostrar el botón móvil dentro del menú */
     .nav__btn-mobile { display: block; margin-top: 1rem; }
 
-    /* 3. Menú Desplegable con TRANSFORM (La solución) */
+    /* 3. Menú Desplegable con TRANSFORM */
     .nav__menu {
         position: fixed;
         top: 0;
@@ -81,7 +81,6 @@ img { max-width: 100%; display: block; }
         padding-bottom: 4rem;
         text-align: center;
         
-        /* ESTA ES LA CLAVE: Lo movemos hacia arriba un 100% de su altura */
         transform: translateY(-100%);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         

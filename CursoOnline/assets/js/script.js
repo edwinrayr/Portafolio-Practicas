@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ================= 2. CERRAR MENÚ AL TOCAR ENLACE ================= */
-    // Esto es vital para Landing Pages de una sola página
     const navLinks = document.querySelectorAll('.nav__link');
     const mobileBtn = document.querySelector('.nav__btn-mobile a');
 
