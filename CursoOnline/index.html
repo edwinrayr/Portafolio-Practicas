@@ -13,18 +13,41 @@
 
     <div class="scroll-progress" id="scroll-progress"></div>
 
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
                 <i class="ri-code-box-line"></i> DevMaster
             </a>
-            <a href="#registro" class="btn btn--sm">Registrarme</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#inicio" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#temario" class="nav__link">Temario</a></li>
+                    <li class="nav__item"><a href="#faq" class="nav__link">Ayuda</a></li>
+                    
+                    <li class="nav__item nav__btn-mobile">
+                        <a href="#registro" class="btn btn--block">Registrarme</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <a href="#registro" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="main">
         
-        <section class="hero section">
+        <section class="hero section" id="inicio">
             <div class="hero__container container">
                 <span class="hero__badge">Nueva Masterclass Gratuita</span>
                 <h1 class="hero__title">Domina la Arquitectura <br> de Software Escalable</h1>
@@ -45,31 +68,25 @@
             </div>
         </section>
 
-        <section class="learn section">
+        <section class="learn section" id="temario">
             <div class="container">
                 <h2 class="section__title">Lo que descubrirás</h2>
                 
                 <div class="learn__grid">
                     <article class="card">
-                        <div class="card__icon">
-                            <i class="ri-server-line"></i>
-                        </div>
+                        <div class="card__icon"><i class="ri-server-line"></i></div>
                         <h3 class="card__title">Microservicios</h3>
                         <p class="card__desc">Cuándo usarlos y cuándo huir de ellos. Patrones reales de la industria.</p>
                     </article>
 
                     <article class="card">
-                        <div class="card__icon">
-                            <i class="ri-database-2-line"></i>
-                        </div>
+                        <div class="card__icon"><i class="ri-database-2-line"></i></div>
                         <h3 class="card__title">Escalabilidad DB</h3>
                         <p class="card__desc">Estrategias de Sharding y Replicación para manejar millones de datos.</p>
                     </article>
 
                     <article class="card">
-                        <div class="card__icon">
-                            <i class="ri-shield-check-line"></i>
-                        </div>
+                        <div class="card__icon"><i class="ri-shield-check-line"></i></div>
                         <h3 class="card__title">Seguridad Zero Trust</h3>
                         <p class="card__desc">Implementa autenticación robusta JWT y OAuth2 desde cero.</p>
                     </article>
@@ -77,7 +94,7 @@
             </div>
         </section>
 
-        <section class="faq section">
+        <section class="faq section" id="faq">
             <div class="container faq__container">
                 <h2 class="section__title">Preguntas Frecuentes</h2>
 
@@ -165,7 +182,7 @@
         <div class="modal__content">
             <i class="ri-close-line modal__close" id="modal-close"></i>
             <div class="modal__video-container">
-                <iframe id="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/watch?v=TdITcVD64zI" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1" title="Video Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
