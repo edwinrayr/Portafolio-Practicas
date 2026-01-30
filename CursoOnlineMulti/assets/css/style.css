@@ -270,3 +270,62 @@ img { max-width: 100%; display: block; }
     70% { box-shadow: 0 0 0 15px rgba(124, 58, 237, 0); } 
     100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0); } 
 }
+
+/* ================= PRELOADER (PANTALLA DE CARGA) ================= */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color); /* Fondo sólido para tapar todo */
+    z-index: 9999; /* Por encima de todo, incluso del menú y modales */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Desvanecimiento suave */
+}
+
+/* Estado oculto (se activa con JS) */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* El Anillo Giratorio Tech */
+.loader-ring {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(124, 58, 237, 0.2); /* Borde suave */
+    border-top-color: var(--primary-color);   /* Borde brillante */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.4); /* Glow morado */
+}
+
+/* Texto parpadeante */
+.loader-text {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    animation: pulseText 1.5s infinite ease-in-out;
+}
+
+/* Animaciones */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulseText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}

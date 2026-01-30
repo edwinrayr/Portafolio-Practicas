@@ -1,5 +1,16 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
+/* ================= PRELOADER LOGIC ================= */
+    document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            // Le damos un pequeño tiempo extra (0.5s) para que la animación se luzca
+            // y no sea un "parpadeo" feo si el internet es muy rápido.
+            setTimeout(() => {
+                preloader.classList.add('preloader-hidden');
+            }, 500); 
+        }
+    }); 
+   
     /* ================= MENU RESPONSIVO ================= */
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
