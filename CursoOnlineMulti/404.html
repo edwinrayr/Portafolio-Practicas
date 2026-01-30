@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 | Sistema No Encontrado</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .error-page {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1c2e 0%, #0b0c15 100%);
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--primary-color);
+            opacity: 0.5;
+            line-height: 1;
+        }
+        .error-glitch {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <main class="error-page container">
+        <h1 class="error-code">404</h1>
+        <p class="error-glitch">Architecture Not Found</p>
+        <p style="color: var(--text-muted); max-width: 400px; margin-bottom: 2rem;">
+            Parece que has intentado acceder a un módulo que no existe o ha sido eliminado del servidor.
+        </p>
+        <a href="./" class="btn">Regresar a la Base</a>
+    </main>
+</body>
+</html>

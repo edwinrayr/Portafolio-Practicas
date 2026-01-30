@@ -140,4 +140,29 @@
             }
         });
     }
+
+        /* ================= SCROLL REVEAL ANIMATION ================= */
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+        // reset: true // Si quieres que se repita la animación al subir y bajar
+    });
+
+    // Animamos elementos generales
+    sr.reveal(`.hero__title, .section__title, .faq__intro`);
+
+    // Elementos con retardo (delay) para efecto cascada
+    sr.reveal(`.hero__description, .hero__badge`, {delay: 500});
+    sr.reveal(`.video__wrapper`, {delay: 700});
+    sr.reveal(`.logos__container`, {delay: 900, origin: 'bottom'});
+
+    // Tarjetas (aparecen desde abajo con intervalos)
+    sr.reveal(`.card, .testimonial__card, .module__card`, {interval: 100});
+
+    // Elementos laterales
+    sr.reveal(`.register__info, .instructor__img-box`, {origin: 'left'});
+    sr.reveal(`.register__form-wrapper, .instructor__data`, {origin: 'right'});
+
 });
