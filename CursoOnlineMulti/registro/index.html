@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu lugar | DevMaster</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav__logo">
+                <i class="ri-code-box-line"></i> DevMaster
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="../temario/" class="nav__link">Temario</a></li>
+                    <li class="nav__item"><a href="../faq/" class="nav__link">Ayuda</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+            </div>
+
+            <div class="nav__actions">
+                <a href="./" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="register section" style="padding-top: 8rem; min-height: 100vh;">
+            <div class="container">
+                
+                <div class="register__grid">
+                    
+                    <div class="register__info">
+                        <span class="register__badge">Acceso Gratuito Limitado</span>
+                        <h1 class="section__title" style="text-align: inherit; margin-bottom: 1.5rem;">
+                            Tu carrera como Arquitecto <br> de Software empieza hoy.
+                        </h1>
+                        <p class="hero__description" style="margin: 0; max-width: 100%;">
+                            No dejes pasar la oportunidad de dominar la ingeniería de sistemas distribuidos. Únete a la comunidad de desarrolladores de alto nivel.
+                        </p>
+
+                        <div class="register__list">
+                            <div class="register__item">
+                                <i class="ri-check-line register__icon"></i>
+                                <span>Acceso de por vida al material (PDFs y Video).</span>
+                            </div>
+                            <div class="register__item">
+                                <i class="ri-check-line register__icon"></i>
+                                <span>Código fuente de los proyectos en GitHub.</span>
+                            </div>
+                            <div class="register__item">
+                                <i class="ri-check-line register__icon"></i>
+                                <span>Certificado digital de finalización.</span>
+                            </div>
+                            <div class="register__item">
+                                <i class="ri-check-line register__icon"></i>
+                                <span>Soporte prioritario por Discord.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="register__form-wrapper">
+                        <form class="form" id="register-form">
+                            <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Crea tu cuenta</h3>
+                            
+                            <div class="form__group">
+                                <label for="name" class="form__label">Nombre Completo</label>
+                                <input type="text" id="name" class="form__input" placeholder="Ej. Juan Pérez">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">Correo Profesional</label>
+                                <input type="email" id="email" class="form__input" placeholder="tu@empresa.com">
+                            </div>
+
+                            <div class="form__group">
+                                <label for="whatsapp" class="form__label">WhatsApp (Para enviarte el acceso)</label>
+                                <input type="tel" id="whatsapp" class="form__input" placeholder="+52 55...">
+                            </div>
+
+                            <button type="submit" class="btn btn--block">Confirmar Registro</button>
+                            
+                            <p class="form__error" id="form-error"></p>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+                                <i class="ri-lock-line"></i> Tus datos están 100% seguros.
+                            </p>
+                        </form>
+
+                        <div class="success-message" id="success-message">
+                            <div class="success__icon" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem;">
+                                <i class="ri-checkbox-circle-fill"></i>
+                            </div>
+                            <h3 class="success__title" style="font-size: 1.5rem; margin-bottom: 0.5rem;">¡Estás dentro!</h3>
+                            <p class="success__desc" style="color: var(--text-muted);">
+                                Hemos enviado el link de acceso a tu correo. Revisa tu bandeja de entrada (y Spam por si acaso).
+                            </p>
+                            <a href="../" class="btn btn--sm" style="margin-top: 2rem; background: transparent; border: 1px solid var(--primary-color);">Volver al Inicio</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p class="footer__copy">&copy; 2026 Pixel Software. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

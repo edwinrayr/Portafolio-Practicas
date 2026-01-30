@@ -3,41 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - DevMaster</title>
+    <title>Masterclass: Arquitectura de Software | DevMaster</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <i class="ri-code-box-line"></i> DevMaster
-            </a>
-
+            <a href="./" class="nav__logo"><i class="ri-code-box-line"></i> DevMaster</a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Inicio</a></li>
-                    <li class="nav__item"><a href="temario.html" class="nav__link">Temario</a></li>
-                    <li class="nav__item"><a href="faq.html" class="nav__link">Ayuda</a></li>
-                    
-                    <li class="nav__item nav__btn-mobile">
-                        <a href="registro.html" class="btn btn--block">Registrarme</a>
-                    </li>
+                    <li class="nav__item"><a href="./" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="temario/" class="nav__link">Temario</a></li>
+                    <li class="nav__item"><a href="faq/" class="nav__link">Ayuda</a></li>
                 </ul>
-
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
+                <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
             </div>
-
             <div class="nav__actions">
-                <a href="registro.html" class="btn btn--sm nav__btn-pc">Registrarme</a>
-                
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line"></i>
-                </div>
+                <a href="registro/" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
             </div>
         </nav>
     </header>
@@ -45,31 +31,103 @@
     <main class="main">
         <section class="hero section">
             <div class="hero__container container">
-                <span class="hero__badge">Nueva Masterclass Gratuita</span>
-                <h1 class="hero__title">Domina la Arquitectura <br> de Software Escalable</h1>
+                <span class="hero__badge">Nueva Masterclass 2026</span>
+                <h1 class="hero__title">Arquitectura de Software <br> Sin Rellenos</h1>
                 <p class="hero__description">
-                    Aprende a diseñar sistemas robustos. Sin teoría aburrida, directo al código.
+                    Deja de escribir "código espagueti". Aprende a diseñar sistemas de software escalables, seguros y mantenibles como un experto.
                 </p>
-
                 <div class="video__wrapper" id="video-trigger">
                     <div class="video__thumbnail">
                         <div class="play-button"><i class="ri-play-fill"></i></div>
-                        <span class="video__text">Ver Trailer (01:30)</span>
+                        <span class="video__text">Ver Trailer del Curso</span>
                     </div>
                     <div class="video__glow"></div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <div class="container" style="text-align: center;">
-                <h2 class="section__title">¿Qué vas a lograr?</h2>
-                <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">
-                    Hemos condensado años de experiencia en una masterclass intensiva. Descubre los módulos de Microservicios, Seguridad y Bases de Datos.
-                </p>
-                <a href="temario.html" class="btn" style="background-color: transparent; border: 1px solid var(--primary-color);">Ver Temario Completo</a>
+        <section class="logos">
+            <div class="logos__container container">
+                <div class="logos__item"><i class="ri-google-fill" style="font-size: 2rem; color:white;"></i></div>
+                <div class="logos__item"><i class="ri-amazon-fill" style="font-size: 2rem; color:white;"></i></div>
+                <div class="logos__item"><i class="ri-spotify-fill" style="font-size: 2rem; color:white;"></i></div>
+                <div class="logos__item"><i class="ri-microsoft-fill" style="font-size: 2rem; color:white;"></i></div>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Alumnos trabajando en top tech</p>
             </div>
         </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section__title">¿Qué vas a dominar?</h2>
+                
+                <div class="learn__grid">
+                    <article class="card">
+                        <div class="card__icon"><i class="ri-layout-masonry-line"></i></div>
+                        <h3 class="card__title">Clean Architecture</h3>
+                        <p class="card__desc">
+                            Domina SOLID y la separación de responsabilidades para crear software mantenible y testearlo sin dolor.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__icon"><i class="ri-node-tree"></i></div>
+                        <h3 class="card__title">Sistemas Distribuidos</h3>
+                        <p class="card__desc">
+                            Patrones para Microservicios, comunicación asíncrona, consistencia eventual y manejo de fallos.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card__icon"><i class="ri-cloud-shield-line"></i></div>
+                        <h3 class="card__title">Cloud & DevSecOps</h3>
+                        <p class="card__desc">
+                            Despliegue profesional con Docker, Kubernetes y seguridad Zero Trust (OAuth2/JWT) desde el día uno.
+                        </p>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="temario/" class="btn" style="background: transparent; border: 1px solid var(--primary-color);">Ver Temario Completo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container instructor__container">
+                <div class="instructor__img-box">
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Instructor" class="instructor__img">
+                    <div class="instructor__blob"></div>
+                </div>
+                <div class="instructor__data">
+                    <h2 class="instructor__name">Alex Dev</h2>
+                    <span class="instructor__role">Arquitecto de Software Senior</span>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                        Con más de 10 años de experiencia liderando equipos de desarrollo. He condensado años de errores y aciertos en este curso de arquitectura de software.
+                    </p>
+                    <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+                        <div>
+                            <h3 style="color: #fff; font-size: 1.5rem;">15k+</h3>
+                            <span style="font-size: 0.9rem; color: var(--text-muted);">Alumnos</span>
+                        </div>
+                        <div>
+                            <h3 style="color: #fff; font-size: 1.5rem;">4.9</h3>
+                            <span style="font-size: 0.9rem; color: var(--text-muted);">Calificación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="text-align: center;">
+            <div class="container">
+                <h2 class="section__title">¿Listo para subir de nivel?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-inline: auto;">
+                    Únete a la nueva generación de arquitectos de software hoy mismo. Acceso inmediato.
+                </p>
+                <a href="registro/" class="btn btn--block" style="max-width: 300px; margin: 0 auto;">Empezar Ahora</a>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer container">
@@ -80,11 +138,17 @@
         <div class="modal__content">
             <i class="ri-close-line modal__close" id="modal-close"></i>
             <div class="modal__video-container">
-                <iframe id="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/watch?v=TdITcVD64zI" title="Video" frameborder="0" allowfullscreen></iframe>
+                <iframe id="youtube-video" width="100%" height="100%" src="https://www.youtube.com/embed/watch?v=dHv9RUhdjO4" title="Video" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
 
-    <script src="./assets/js/script.js"></script>
+    <div class="floating-cta">
+        <a href="registro/" class="btn btn--block btn--glow">
+            Regístrate Gratis
+        </a>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

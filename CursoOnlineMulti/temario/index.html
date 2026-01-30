@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temario Completo | DevMaster</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav__logo">
+                <i class="ri-code-box-line"></i> DevMaster
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="./" class="nav__link" style="color: var(--primary-color);">Temario</a></li>
+                    <li class="nav__item"><a href="../faq/" class="nav__link">Ayuda</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+            </div>
+
+            <div class="nav__actions">
+                <a href="../registro/" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <section class="section" style="padding-top: 8rem; text-align: center;">
+            <div class="container">
+                <span class="hero__badge">Plan de Estudios 2026</span>
+                <h1 class="hero__title" style="font-size: 2.5rem;">De Desarrollador a Arquitecto <br> Módulo por Módulo</h1>
+                <p class="hero__description">
+                    Una ruta estructurada para dominar la arquitectura de software sin perderte en la teoría.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="timeline">
+                    
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <article class="module__card">
+                            <span class="module__number">01</span>
+                            <div class="module__content">
+                                <h2 class="module__title">Fundamentos de Arquitectura de Software</h2>
+                                <span class="module__desc">Semana 1 - La Base Sólida</span>
+                                <ul class="topic__list">
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Diferencia entre Diseño de Código y Arquitectura de Sistemas.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Atributos de Calidad (Disponibilidad, Escalabilidad, Mantenibilidad).</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Clean Architecture: Teoría y Práctica en proyectos reales.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Principios SOLID aplicados a nivel de componentes.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <article class="module__card">
+                            <span class="module__number">02</span>
+                            <div class="module__content">
+                                <h2 class="module__title">Patrones de Arquitectura Distribuida</h2>
+                                <span class="module__desc">Semana 2 - Escalando la Aplicación</span>
+                                <ul class="topic__list">
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> De Monolito a Microservicios: Estrategias de descomposición.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Comunicación Síncrona (REST/gRPC) vs Asíncrona (Event-Driven).</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Patrón Saga y CQRS para transacciones complejas.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Teorema CAP y consistencia eventual en Bases de Datos.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <article class="module__card">
+                            <span class="module__number">03</span>
+                            <div class="module__content">
+                                <h2 class="module__title">Infraestructura y Seguridad</h2>
+                                <span class="module__desc">Semana 3 - Cloud Native & DevSecOps</span>
+                                <ul class="topic__list">
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Contenerización profesional con Docker.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Orquestación básica con Kubernetes para desarrolladores.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Seguridad Zero Trust: Implementación de OAuth2 y OpenID Connect.</li>
+                                    <li class="topic__item"><i class="ri-checkbox-circle-line topic__icon"></i> Pipelines de CI/CD: Del commit a producción.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <article class="module__card">
+                            <span class="module__number">04</span>
+                            <div class="module__content">
+                                <h2 class="module__title">Proyecto Final Integrador</h2>
+                                <span class="module__desc">Semana 4 - Manos al Código</span>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+                                    Diseñaremos y programaremos el MVP de una plataforma de Streaming escalable (tipo Netflix Clone) aplicando todo lo aprendido.
+                                </p>
+                                <ul class="topic__list">
+                                    <li class="topic__item"><i class="ri-trophy-line topic__icon" style="color: #fbbf24;"></i> Definición de requisitos no funcionales.</li>
+                                    <li class="topic__item"><i class="ri-trophy-line topic__icon" style="color: #fbbf24;"></i> Diagramas C4 del sistema.</li>
+                                    <li class="topic__item"><i class="ri-trophy-line topic__icon" style="color: #fbbf24;"></i> Revisión de código en vivo y feedback.</li>
+                                    <li class="topic__item"><i class="ri-trophy-line topic__icon" style="color: #fbbf24;"></i> Certificación de Arquitecto Junior.</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="text-align: center;">
+            <div class="container">
+                <h2 class="section__title">¿Aceptas el reto?</h2>
+                <a href="../registro/" class="btn btn--block" style="max-width: 300px; margin: 0 auto;">Inscribirme al Curso</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer container">
+        <p class="footer__copy">&copy; 2026 Pixel Software. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | DevMaster</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .faq__group-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            margin-top: 3rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: inline-block;
+        }
+        .faq__intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../" class="nav__logo">
+                <i class="ri-code-box-line"></i> DevMaster
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="../" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="../temario/" class="nav__link">Temario</a></li>
+                    <li class="nav__item"><a href="./" class="nav__link" style="color: var(--primary-color);">Ayuda</a></li>
+                </ul>
+                <div class="nav__close" id="nav-close"><i class="ri-close-line"></i></div>
+            </div>
+
+            <div class="nav__actions">
+                <a href="../registro/" class="btn btn--sm nav__btn-pc">Registrarme</a>
+                <div class="nav__toggle" id="nav-toggle"><i class="ri-menu-line"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <section class="section" style="padding-top: 8rem; padding-bottom: 2rem;">
+            <div class="container faq__intro">
+                <span class="hero__badge">Centro de Ayuda</span>
+                <h1 class="hero__title">Resolvemos tus dudas <br> antes de empezar</h1>
+                <p class="hero__description">
+                    Queremos que estés 100% seguro de tu decisión. Aquí están las respuestas a lo que más nos preguntan los desarrolladores.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container faq__container">
+                
+                <h3 class="faq__group-title"><i class="ri-book-open-line"></i> Sobre el Curso</h3>
+                <div class="accordion">
+                    
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h3 class="accordion__title">¿Es necesario saber programar?</h3>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__desc">
+                                Sí. Este es un curso intermedio-avanzado. Necesitas experiencia previa en desarrollo backend (con cualquier lenguaje como Java, Node.js, C# o Python) y entender conceptos básicos de APIs REST y Bases de Datos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h3 class="accordion__title">¿La Masterclass es en vivo o grabada?</h3>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__desc">
+                                Es contenido <strong>pre-grabado de alta definición (4K)</strong>. Esto te permite avanzar a tu propio ritmo, pausar y repetir las lecciones técnicas tantas veces como necesites. Tendrás acceso inmediato tras el registro.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <h3 class="faq__group-title"><i class="ri-terminal-box-line"></i> Stack Tecnológico</h3>
+                <div class="accordion">
+                    
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h3 class="accordion__title">¿Qué herramientas de software necesito instalar?</h3>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__desc">
+                                Utilizaremos herramientas estándar de la industria: <strong>Docker Desktop</strong>, un IDE (VS Code o IntelliJ), Postman y necesitarás crear una cuenta gratuita en AWS (Capa Free Tier) para los despliegues.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h3 class="accordion__title">¿El curso está atado a un lenguaje específico?</h3>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__desc">
+                                No. La <strong>Arquitectura de Software es agnóstica</strong>. Los conceptos de microservicios, eventos y seguridad aplican igual si programas en Java o en Go. Los ejemplos prácticos estarán en Node.js/TypeScript por ser fáciles de leer, pero puedes replicarlos en tu lenguaje favorito.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <h3 class="faq__group-title"><i class="ri-vip-crown-line"></i> Certificación y Soporte</h3>
+                <div class="accordion">
+                    
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h3 class="accordion__title">¿Cómo obtengo el certificado?</h3>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__desc">
+                                Al finalizar el Módulo 4 (Proyecto Final), deberás subir tu repositorio de GitHub a nuestra plataforma. Nuestro sistema validará tu código automáticamente y te otorgará un Badge Digital verificable en LinkedIn.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="accordion__item">
+                        <header class="accordion__header">
+                            <h3 class="accordion__title">¿Tengo soporte si me atasco?</h3>
+                            <i class="ri-add-line accordion__icon"></i>
+                        </header>
+                        <div class="accordion__content">
+                            <p class="accordion__desc">
+                                ¡Claro! Al registrarte recibes acceso a nuestro <strong>Servidor Privado de Discord</strong>. Ahí tenemos canales de ayuda técnica donde mentores y otros alumnos resuelven dudas en tiempo real.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="section" style="text-align: center;">
+            <div class="container">
+                <h2 class="section__title">¿Duda resuelta?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">No esperes más para impulsar tu carrera.</p>
+                <a href="../registro/" class="btn btn--block" style="max-width: 300px; margin: 0 auto;">Quiero mi Acceso</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer container">
+        <p class="footer__copy">&copy; 2026 Pixel Software. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="floating-cta">
+        <a href="../registro/" class="btn btn--block btn--glow">
+            Regístrate Gratis
+        </a>
+    </div>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
