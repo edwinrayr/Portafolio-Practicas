@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '../ui/Button';
+import logo from '../../assets/images/esoftlogo.png';
 import { Link, useLocation } from 'react-router-dom'; // <--- IMPORTANTE
 
 export const Navbar = () => {
@@ -16,8 +17,9 @@ export const Navbar = () => {
   // Definimos las rutas reales
   const navLinks = [
     { name: 'Inicio', path: '/' },
-    { name: 'Soluciones', path: '/servicios' },
     { name: 'Nosotros', path: '/nosotros' },
+    { name: 'Servicios', path: '/servicios' },
+    { name: 'Soluciones', path: '/soluciones' },
   ];
 
   // Función para saber si el link está activo
@@ -32,9 +34,11 @@ export const Navbar = () => {
           
           {/* LOGO CON LINK AL INICIO */}
           <Link to="/" className="flex-shrink-0 flex items-center cursor-pointer z-50">
-            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-              eSoft<span className="text-primary">Pasion</span>
-            </span>
+            <img
+              src={logo}
+              alt="eSoft Pasion Logo"
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* MENU ESCRITORIO */}
