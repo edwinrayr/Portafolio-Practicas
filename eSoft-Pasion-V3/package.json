@@ -12,9 +12,11 @@
   "dependencies": {
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.3",
+    "i18next": "^25.8.4",
     "lucide-react": "^0.314.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^16.5.4",
     "react-router-dom": "^6.21.3",
     "tailwind-merge": "^2.2.1"
   },

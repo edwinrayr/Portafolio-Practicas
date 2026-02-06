@@ -17,15 +17,10 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               {/* Imagen del Logo - Asegúrate de tener 'logo.png' en la carpeta public */}
               <img 
-                src="/esoftlogo.svg" 
+                src="/esoftlogo.png" 
                 alt="Logo eSoft Pasion" 
                 className="h-12 w-auto object-contain opacity-90" 
               />
-              
-              {/* Nombre de la marca (opcional, se ve bien junto al logo) */}
-              <span className="text-xl font-bold tracking-tight text-white uppercase font-heading">
-                eSoft <span className="text-esoft-accent">Pasion</span>
-              </span>
             </div>
             
             <p className="text-esoft-gray-light text-sm leading-relaxed">
